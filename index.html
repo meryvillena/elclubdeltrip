@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Club del Trip</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logoCabecera.svg" alt="Logo El Club del Trip" class="logo">
+            </a>
+        </div>
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="#sobre-el-club">Sobre el Club</a></li>
+                <li><a href="#lo-sagrado">Lo Sagrado</a></li>
+                <li><a href="#el-laboratorio">El Laboratorio</a></li>
+                <li><a href="#cronicas">Crónicas de Astrid N.</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Portada -->
+        <section class="portada">
+            <img src="images/homePortada.png" alt="Portada principal" class="portada-imagen">
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© <span id="year"></span> El Club del Trip. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para actualizar el año dinámicamente -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* Tipografías personalizadas */
+@font-face {
+    font-family: 'Bame';
+    src: url('../fonts/Bame-qZZ66.woff2') format('woff2'),
+         url('../fonts/Bame-qZZ66.woff') format('woff'),
+         url('../fonts/Bame-qZZ66.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Anonymous';
+    src: url('../fonts/Anonymous-Regular.woff2') format('woff2'),
+         url('../fonts/Anonymous-Regular.woff') format('woff'),
+         url('../fonts/Anonymous-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2'),
+         url('../fonts/MontserratAlternates-Regular.woff') format('woff'),
+         url('../fonts/MontserratAlternates-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+         url('../fonts/Montserrat-Regular.woff') format('woff'),
+         url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+/* Variables de colores */
+:root {
+    --gris-100: #FAF9FA; /* Fondo */
+    --gris-200: #B59DBA;
+    --gris-300: #201720; /* Texto */
+    --primario-magenta: #FF00F6;
+    --primario-magenta60: #ff00f785;
+    --primario-purpura: #5A42BB;
+    --primario-celeste: #82D8E0;
+    --primario-rojo: #FF520A;
+    --secundario-rosa: #FF84CE;
+    --secundario-amarillo: hsl(46, 98%, 63%);
+    --secundario-verde: #23D779;
+    --secundario-azul: #3D7EFD;
+    --gradiente-logo: linear-gradient(
+        90deg, 
+        hsla(254, 44%, 55%, 1) 0%, 
+        hsla(336, 77%, 61%, 1) 20%, 
+        hsla(11, 89%, 57%, 1) 40%, 
+        hsla(218, 84%, 56%, 1) 60%, 
+        hsla(46, 82%, 53%, 1) 80%, 
+        hsla(167, 57%, 33%, 1) 100%
+    );
+    --gradiente-claim: linear-gradient(
+        90deg, 
+        #7059bf 16%, 
+        #e84e8c 32%, 
+        #f35432 48%, 
+        #3076ed 64%, 
+        #e9ba24 80%, 
+        #248470 96%
+    );
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--gris-100);
+    color: var(--gris-300);
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor global */
+.container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Columnas: espacio - contenido - espacio */
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 90px; /* Espacio entre columnas */
+    max-width: 1200px; /* Ancho máximo de la página */
+    margin: 60px auto; /* Centra todo horizontalmente */
+    padding: 24px 24px; /* Márgenes internos */
+    box-sizing: border-box;
+}
+
+/* Logo Container */
+.logo-container {
+    grid-column: 2; /* El logo está en la columna central */
+    justify-self: start; /* Alinea el logo a la izquierda dentro de su celda */
+    padding-top: 20px; /* Añade separación desde la parte superior */
+    padding-left: 20px; /* Añade separación desde el lado izquierdo */
+}
+.logo {
+    width: 535px; /* Tamaño fijo del logo */
+    height: auto;
+}
+
+/* Menú */
+.menu {
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-top: 20px; /* Espacio entre el menú y el logo */
+    margin-bottom: -20px; /* Reduce el espacio extra entre el menú y la portada */
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los elementos se vayan a varias líneas */
+    gap: 32px; /* Espaciado uniforme entre botones */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bame', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 8px 20px; /* Espaciado interno */
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    background: none;
+    color: var(--gris-300);
+    width: auto; /* Ajuste dinámico */
+    white-space: nowrap; /* Asegura que el texto quede en una sola línea */
+    text-align: center;
+}
+
+.menu li a:hover {
+    background: var(--gradiente-claim);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu li a:active {
+    background: var(--gradiente-logo);
+    color: var(--gris-300);
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+    transform: scale(0.98);
+}
+
+/* Portada */
+.portada {
+    max-width: 1200px; /* Asegura alineación con el contenedor */
+    margin: 40px auto; /* Espaciado superior e inferior */
+    padding: 0 20px; /* Igual margen lateral */
+    text-align: center;
+}
+
+.portada-imagen {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Fondo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--gris-100); /* Fondo uniforme */
+    color: var(--gris-300);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .logo-container {
+        justify-self: center; /* Centra el logo */
+    }
+
+    .menu {
+        justify-content: center; /* Centra el menú */
+    }
+
+    .logo {
+        width: 300px; /* Tamaño reducido del logo */
+    }
+
+    .menu ul {
+        flex-direction: column; /* Coloca los botones en columna */
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 200px; /* Logo aún más pequeño en pantallas pequeñas */
+    }
+
+    .menu ul {
+        text-align: center;
+    }
+}
