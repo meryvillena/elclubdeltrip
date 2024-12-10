@@ -8,9 +8,9 @@
 
 @font-face {
     font-family: 'Anonymous';
-    src: url('../fonts/Anonymous-Regular.woff2') format('woff2'),
-         url('../fonts/Anonymous-Regular.woff') format('woff'),
-         url('../fonts/Anonymous-Regular.ttf') format('truetype');
+    src: url('../fonts/AnonymousPro-Regular.woff2') format('woff2'),
+         url('../fonts/AnonymousPro-Regular.woff') format('woff'),
+         url('../fonts/AnonymousPro-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -71,6 +71,149 @@ body {
     margin: 0;
     padding: 0;
 }
+/* === Componentes Reutilizables === */
+/* Botón S */
+.boton-s {
+    display: flex; /* Centra contenido */
+    width: 136px; /* Ancho fijo */
+    padding: 4px; /* Espaciado interno */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    gap: 4px; /* Espaciado entre elementos internos, si los hay */
+    border-radius: 4px; /* Bordes redondeados */
+    background: var(--primario-magenta, #FF00F6); /* Fondo inicial */
+    color: hsla(302, 16%, 11%, 1); /* Color del texto */
+    font-family: 'Anonymous Pro', monospace; 
+    font-size: 16px; /* Tamaño de texto */
+    font-weight: 600; /* Grosor del texto */
+    border: none; /* Sin bordes adicionales */
+    text-decoration: none; /* Elimina el subrayado */
+    cursor: pointer; /* Cursor de mano */
+    transition: all 300ms ease-in-out; /* Transiciones suaves */
+    box-shadow: none; /* Sin sombra inicial */
+}
+
+/* Hover para Botón S */
+.boton-s:hover {
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra interior */
+}
+
+/* Estado activo (clic) para Botón S */
+.boton-s:active {
+    transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
+}
+
+/* Contenedor de imagen adaptable */
+.image-container {
+    position: relative; /* Contenedor relativo para las etiquetas absolutas */
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que la etiqueta no sobresalga */
+}
+
+/* Imagen dentro del contenedor */
+.image-container img {
+    width: 100%; /* Escala según el tamaño del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: inherit; /* Respeta los bordes del contenedor */
+}
+
+/* Etiqueta de autor superpuesta */
+.image-label {
+    position: absolute; /* Superpuesta dentro del contenedor */
+    bottom: 8px; /* Espaciado desde la parte inferior */
+    right: 8px; /* Espaciado desde la parte derecha */
+    background: rgba(255, 0, 246, 0.6); /* Fondo magenta con opacidad */
+    backdrop-filter: blur(8px); /* Efecto de desenfoque */
+    color: var(--gris-100, #ffffff); /* Usa la variable, o blanco por defecto */
+    font-family: 'Anonymous Pro', sans-serif; /* Fuente personalizada */
+    font-size: 12px; /* Tamaño del texto */
+    padding: 4px 8px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    z-index: 1; /* Asegura que esté encima de la imagen */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+}
+
+/* Sección de destacados */
+.destacados {
+    display: flex; /* Utilizamos Flexbox */
+    justify-content: center; /* Centra horizontalmente la card */
+    align-items: center; /* Centra verticalmente */
+    padding: 24px 24px; /* Reducimos el padding superior e inferior */
+    background-color: var(--gris-100); /* Fondo claro */
+    min-height: calc(100vh - 100px); /* Ajustamos el alto mínimo */
+    margin-top: -80px; /* Reduce el espacio superior */
+}
+
+
+/* === Card Destacada con Fuentes Corregidas === */
+
+/* Card base */
+.card-destacada {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Texto + Imagen */
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px; /* Bordes redondeados siempre presentes */
+    box-shadow: none; /* Sin sombra inicial */
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* La card está por encima de la sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Montserrat', sans-serif; /* Fuente general para el estado default */
+    font-size: 16px; /* Tamaño base */
+    line-height: 1.6; /* Altura de línea */
+}
+
+/* Hover general */
+.card-destacada:hover {
+    transform: translateY(-10px); /* Eleva ligeramente la card */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2),
+                0 0 30px 10px rgba(255, 0, 246, 0.5),
+                0 0 60px 20px rgba(82, 216, 224, 0.4); /* Sombra iluminada */
+}
+
+/* Estilo para los textos en default */
+.card-destacada .contenido .etiqueta {
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat para la etiqueta */
+    font-size: 14px;
+    font-weight: 500; /* Grosor medio */
+    color: var(--gris-300); /* Color definido en las variables */
+}
+
+.card-destacada .contenido .titulo {
+    font-family: 'Bame', serif; /* Fuente Bame para el título */
+    font-size: 24px;
+    font-weight: 700; /* Grosor llamativo */
+    line-height: 1.4;
+    color: var(--gris-300); /* Color definido */
+}
+
+.card-destacada .contenido .boton-s {
+    font-family: 'Anonymous Pro', monospace; /* Fuente Anonymous para el botón */
+    font-size: 16px;
+    font-weight: 600;
+    color: hsla(302, 16%, 11%, 1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .destacados {
+        padding: 20px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .card-destacada {
+        grid-template-columns: 1fr; /* Coloca los elementos en una sola columna */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+}
+
+
+
 
 /* Contenedor global */
 .container {
@@ -134,8 +277,9 @@ body {
 
 .menu li a:hover {
     background: var(--gradiente-claim);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente */
 }
 
 .menu li a:active {
