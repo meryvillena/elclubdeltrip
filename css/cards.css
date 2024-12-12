@@ -1,0 +1,95 @@
+/* === Sección de destacados === */
+.destacados {
+    display: flex; /* Coloca las tarjetas una al lado de otra */
+    justify-content: center; /* Centra horizontalmente la tarjeta */
+    align-items: center; /* Centra verticalmente */
+    padding: 24px; /* Espaciado interno */
+    background-color: var(--gris-100); /* Fondo claro */
+    min-height: calc(100vh - 100px); /* Ajustamos el alto mínimo */
+    margin-top: -80px; /* Reduce el espacio superior */
+}
+
+/* === Card Destacada === */
+
+/* Card base */
+.card-destacada {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Texto + Imagen */
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--gris-100);
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: none; /* Sin sombra inicial */
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Prioridad de capa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 16px;
+    line-height: 1.6; /* Espaciado */
+}
+
+/* Hover general */
+.card-destacada:hover {
+    transform: translateY(-10px); /* Eleva ligeramente la tarjeta */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2),
+                0 0 30px 10px rgba(255, 0, 246, 0.5),
+                0 0 60px 20px rgba(82, 216, 224, 0.4); /* Sombra iluminada */
+}
+
+/* Estilo para textos */
+.card-destacada .contenido .etiqueta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gris-300);
+}
+
+.card-destacada .contenido .titulo {
+    font-family: 'Bame', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--gris-300);
+}
+
+/* Estilo del botón */
+.card-destacada .contenido .boton-s {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    color: hsla(302, 16%, 11%, 1);
+    background: var(--primario-magenta); /* Fondo del botón */
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    box-shadow: none; /* Sin sombra inicial */
+}
+
+/* Hover en el botón */
+.card-destacada .contenido .boton-s:hover {
+    box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.3); /* Sombra interior */
+    transform: translateY(1px); /* Hundimiento */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card-destacada {
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center;
+    }
+
+    .card-destacada .contenido {
+        align-items: center;
+    }
+
+    .card-destacada .contenido .boton-s {
+        align-self: center;
+    }
+}
+

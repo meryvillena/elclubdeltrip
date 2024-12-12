@@ -1,0 +1,74 @@
+/* Tipografías personalizadas */
+@font-face {
+    font-family: 'Bame';
+    src: url('../fonts/Bame-qZZ66.woff2') format('woff2'),
+         url('../fonts/Bame-qZZ66.woff') format('woff'),
+         url('../fonts/Bame-qZZ66.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Anonymous';
+    src: url('../fonts/AnonymousPro-Regular.woff2') format('woff2'),
+         url('../fonts/AnonymousPro-Regular.woff') format('woff'),
+         url('../fonts/AnonymousPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2'),
+         url('../fonts/MontserratAlternates-Regular.woff') format('woff'),
+         url('../fonts/MontserratAlternates-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+         url('../fonts/Montserrat-Regular.woff') format('woff'),
+         url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+/* Variables de colores */
+:root {
+    --gris-100: #FAF9FA; /* Fondo */
+    --gris-200: #B59DBA;
+    --gris-300: #201720; /* Texto */
+    --primario-magenta: #FF00F6;
+    --primario-magenta60: #ff00f785;
+    --primario-purpura: #5A42BB;
+    --primario-celeste: #82D8E0;
+    --primario-rojo: #FF520A;
+    --secundario-rosa: #FF84CE;
+    --secundario-amarillo: hsl(46, 98%, 63%);
+    --secundario-verde: #23D779;
+    --secundario-azul: #3D7EFD;
+    /*gradients */
+    --gradiente-logo: linear-gradient(
+        90deg, 
+        hsla(254, 44%, 55%, 1) 0%, 
+        hsla(336, 77%, 61%, 1) 20%, 
+        hsla(11, 89%, 57%, 1) 40%, 
+        hsla(218, 84%, 56%, 1) 60%, 
+        hsla(46, 82%, 53%, 1) 80%, 
+        hsla(167, 57%, 33%, 1) 100%
+    );
+    --gradiente-claim: linear-gradient(
+        90deg, 
+        #7059bf 16%, 
+        #e84e8c 32%, 
+        #f35432 48%, 
+        #3076ed 64%, 
+        #e9ba24 80%, 
+        #248470 96%
+    );
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--gris-100);
+    color: var(--gris-300);
+    margin: 0;
+    padding: 0;
+}

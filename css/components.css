@@ -1,0 +1,50 @@
+/* Botón S: estilos base */
+.boton-s {
+    display: inline-flex; /* Cambiar a inline-flex para adaptarse al contenido */
+    justify-content: center; /* Centrar el texto horizontalmente */
+    align-items: center; /* Centrar el texto verticalmente */
+    white-space: nowrap; /* Evita saltos de línea */
+    padding: 8px 16px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    background: var(--primario-magenta); /* Fondo magenta */
+    color: var(--gris-300); /* Texto gris oscuro */
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out; /* Transición suave */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+}
+
+
+/* Contenedor de imagen adaptable */
+.image-container {
+    position: relative; /* Contenedor relativo para las etiquetas absolutas */
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que la etiqueta no sobresalga */
+}
+
+/* Imagen dentro del contenedor */
+.image-container img {
+    width: 100%; /* Escala según el tamaño del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: inherit; /* Respeta los bordes del contenedor */
+}
+
+/* Etiqueta de autor superpuesta */
+.image-label {
+    position: absolute; /* Superpuesta dentro del contenedor */
+    bottom: 8px; /* Espaciado desde la parte inferior */
+    right: 8px; /* Espaciado desde la parte derecha */
+    background: rgba(255, 0, 246, 0.6); /* Fondo magenta con opacidad */
+    backdrop-filter: blur(8px); /* Efecto de desenfoque */
+    color: var(--gris-100, #ffffff); /* Usa la variable, o blanco por defecto */
+    font-family: 'Anonymous Pro', sans-serif; /* Fuente personalizada */
+    font-size: 12px; /* Tamaño del texto */
+    padding: 4px 8px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    z-index: 1; /* Asegura que esté encima de la imagen */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+}
