@@ -1,29 +1,31 @@
 /* === Sección de destacados === */
 .destacados {
-    display: flex; /* Coloca las tarjetas una al lado de otra */
-    justify-content: center; /* Centra horizontalmente la tarjeta */
-    align-items: center; /* Centra verticalmente */
-    padding: 24px; /* Espaciado interno */
+    display: flex; /* Usamos flexbox */
+    flex-direction: column; /* Alinea las tarjetas una debajo de la otra */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 24px;
     background-color: var(--gris-100); /* Fondo claro */
-    min-height: calc(100vh - 100px); /* Ajustamos el alto mínimo */
-    margin-top: -80px; /* Reduce el espacio superior */
 }
 
-/* === Card Destacada === */
+
+/* === Card Post Destacados Home === */
 
 /* Card base */
 .card-destacada {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Texto + Imagen */
-    gap: 20px;
-    align-items: center;
+    gap: 20px; /* Espacio entre texto e imagen */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
     padding: 20px;
     background-color: var(--gris-100);
     border-radius: 12px; /* Bordes redondeados */
     box-shadow: none; /* Sin sombra inicial */
     overflow: hidden;
-    max-width: 900px;
-    width: 100%;
+    max-width: 900px; /* Limita el ancho de la tarjeta */
+    width: 100%; /* Ocupa todo el ancho permitido */
+    margin: 0 auto; /* Centra horizontalmente la tarjeta */
     position: relative;
     z-index: 1; /* Prioridad de capa */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -32,13 +34,14 @@
     line-height: 1.6; /* Espaciado */
 }
 
-/* Hover general */
+
 .card-destacada:hover {
-    transform: translateY(-10px); /* Eleva ligeramente la tarjeta */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2),
-                0 0 30px 10px rgba(255, 0, 246, 0.5),
-                0 0 60px 20px rgba(82, 216, 224, 0.4); /* Sombra iluminada */
+    transform: translateY(-1px); /* Elevación casi imperceptible */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), /* Sombra más ligera y difusa */
+                0 0 20px 5px rgba(255, 0, 246, 0.2), /* Sombra secundaria reducida */
+                0 0 40px 10px rgba(82, 216, 224, 0.2); /* Sombra terciaria más tenue */
 }
+
 
 /* Estilo para textos */
 .card-destacada .contenido .etiqueta {
@@ -92,4 +95,33 @@
         align-self: center;
     }
 }
+/* Estilo para las cards invertidas */
+.card-destacada.card-invertida {
+    grid-template-columns: 1fr 2fr; /* Invertimos las columnas */
+    margin: 0 auto; /* Centramos horizontalmente */
+    justify-content: center; /* Opcional: asegura centrado interno */
+}
+
+.card-destacada.card-invertida .imagen {
+    order: -1; /* Cambia el orden del contenido */
+    align-self: center; /* Centra verticalmente la imagen */
+    justify-self: center; /* Centra horizontalmente */
+}
+
+
+/* Responsividad para las cards invertidas */
+@media (max-width: 768px) {
+    .card-destacada.card-invertida {
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center; /* Centra el texto */
+        margin: 0 auto; /* Asegura el centrado horizontal */
+    }
+
+    .card-destacada.card-invertida .imagen {
+        order: 0; /* Resetea el orden */
+        align-self: center; /* Centra verticalmente */
+        justify-self: center; /* Centra horizontalmente */
+    }
+}
+
 
