@@ -1,0 +1,15 @@
+// Datos simulados del último post
+const ultimoPost = {
+    titulo: "PSICODELIA: QUÉ ES, DE DÓNDE VIENE Y POR QUÉ ESTÁ CAMBIANDO LA FORMA EN QUE VEMOS EL MUNDO",
+    resumen: "Psicodelia. Esa palabra que huele a incienso, suena a guitarras distorsionadas y nos teleporta al verano del 67.",
+    imagen: "images/imagen_psicodelia.png",
+    autor: "FreePicks",
+    enlace: "#"
+};
+
+// Actualizar dinámicamente la card
+document.querySelector(".ultimo-post-card .titulo").textContent = ultimoPost.titulo;
+document.querySelector(".ultimo-post-card p").textContent = ultimoPost.resumen;
+document.querySelector(".ultimo-post-card .imagen img").src = ultimoPost.imagen;
+document.querySelector(".ultimo-post-card .image-label").textContent = `Autor: ${ultimoPost.autor}`;
+document.querySelector(".ultimo-post-card .boton-s").href = ultimoPost.enlace;

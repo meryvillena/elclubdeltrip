@@ -1,23 +1,3 @@
-/* Botón S: estilos base */
-.boton-s {
-    display: inline-flex; /* Cambiar a inline-flex para adaptarse al contenido */
-    justify-content: center; /* Centrar el texto horizontalmente */
-    align-items: center; /* Centrar el texto verticalmente */
-    white-space: nowrap; /* Evita saltos de línea */
-    padding: 8px 16px; /* Espaciado interno */
-    border-radius: 4px; /* Bordes redondeados */
-    background: var(--primario-magenta); /* Fondo magenta */
-    color: var(--gris-300); /* Texto gris oscuro */
-    font-family: 'Anonymous Pro', monospace;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: all 300ms ease-in-out; /* Transición suave */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
-}
-
-
 /* Contenedor de imagen adaptable */
 .image-container {
     position: relative; /* Contenedor relativo para las etiquetas absolutas */
@@ -47,4 +27,24 @@
     text-align: center; /* Centra el texto */
     z-index: 1; /* Asegura que esté encima de la imagen */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+}
+/* Estilo base del BOTÓN S */
+.boton-s {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    color: hsla(302, 16%, 11%, 1);
+    background: var(--primario-magenta);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    box-shadow: none; /* Sin sombra inicial */
+}
+
+/* Hover del botón */
+.boton-s:hover {
+    box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(1px);
 }

@@ -124,4 +124,72 @@
     }
 }
 
+/* === Sección del CARD ÚLTIMO POST === */
+.ultimo-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+.card-ultimo-post {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 800px; /* Ajuste según tu diseño */
+    text-align: center; /* Alinea todo al centro */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.card-ultimo-post .image-container {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-ultimo-post .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-ultimo-post .image-label {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(255, 0, 246, 0.6);
+    color: white;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Contenido textual */
+.card-ultimo-post .etiqueta {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    color: var(--gris-300);
+    margin: 0;
+}
+
+.card-ultimo-post .titulo {
+    font-family: 'Bame', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--gris-300);
+    margin: 8px 0;
+}
+
+.card-ultimo-post .descripcion {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--gris-300);
+    margin-bottom: 16px;
+}
+
+
+
+
 
