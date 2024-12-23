@@ -188,7 +188,78 @@
     color: var(--gris-300);
     margin-bottom: 16px;
 }
+/* Espacio adicional entre el último post y el pie de página */
+.espacio-final {
+    height: 2766px; /* Espacio exacto en píxeles */
+    background: transparent; /* Sin color de fondo */
+}
 
+
+/* === Cards de los Posts Más Valorados === */
+
+/* Contenedor de las cards */
+.cards-container {
+    display: grid; /* Rejilla para las cards */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 40px; /* Espacio entre las cards */
+    justify-content: center; /* Centra las cards horizontalmente */
+    align-items: start; /* Alinea las cards en la parte superior */
+    margin: 40px auto; /* Espaciado externo superior e inferior */
+    width: 85%; /* Ancho máximo de las cards */
+}
+
+/* Cada tarjeta (card) */
+.card {
+    background: white; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 16px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+}
+
+/* Imagen dentro de las cards */
+.card img {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 16px; /* Espaciado debajo de la imagen */
+}
+
+/* Título dentro de las cards */
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--gris-300);
+    margin-bottom: 8px; /* Espaciado debajo del título */
+}
+
+/* Texto descriptivo dentro de las cards */
+.card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--gris-300);
+    margin-bottom: 16px; /* Espaciado debajo del texto */
+}
+
+/* Botón dentro de las cards */
+.card .boton-s {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: var(--primario-magenta); /* Fondo magenta */
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+/* Hover en el botón */
+.card .boton-s:hover {
+    background: var(--primario-purpura); /* Cambia el color de fondo */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
 
 
 
